@@ -8,7 +8,6 @@ import os
 import sys
 from sklearn.cluster import KMeans
 
-# --- KONSTANTA BARU UNTUK DATA SUPERSTORE ---
 K_FIXED = 2 
 SPENDING_COLS = ['Total_Sales', 'Total_Profit', 'Total_Quantity', 'Frequency']
 MODEL_FILES = {
@@ -180,7 +179,7 @@ if predict_button:
         pca_plot_area.pyplot(fig_updated) 
 
     with col_results_display:
-        st.subheader("3. Hasil Prediksi")
+        st.subheader("Hasil Prediksi")
         
         if predicted_cluster == 0:
             st.success(f"Segmen Diprediksi: **Kluster {predicted_cluster} (HIGH-VALUE)** 🎉")
@@ -211,4 +210,5 @@ if predict_button:
             st.success("Tindakan: Pertahankan dan Kembangkan. Fokus pada **Program Loyalitas Eksklusif, Penawaran Produk Baru (Terutama Teknologi), dan Peningkatan Layanan Premium**.")
         else:
             st.warning("Tindakan: Tingkatkan Nilai. Fokus pada **Penjualan Silang (Cross-Selling) produk dengan marjin tinggi (Technology/Office Supplies)** dan insentif untuk meningkatkan frekuensi pembelian.")
+
 
